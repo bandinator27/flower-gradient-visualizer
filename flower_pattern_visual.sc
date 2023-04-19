@@ -1,11 +1,11 @@
-// --made by bandinator#5428 (2023)
-// --https://www.youtube.com/channel/UCdyMN5aRGibjSENUILp9J1Q
-// --based on Firigion's & gnembon's similar scripts
-// --https://github.com/gnembon/scarpet/blob/master/programs/utilities/flower.sc
-// --https://github.com/Firigion/scarpets/blob/master/README.md#flowerify
-//--fabric-carpet 1.4.93, fapric_api 0.73.0
+// made by bandinator#5428 (2023)
+// https://www.youtube.com/channel/UCdyMN5aRGibjSENUILp9J1Q
+// based on Firigion's & gnembon's similar scripts
+// https://github.com/gnembon/scarpet/blob/master/programs/utilities/flower.sc
+// https://github.com/Firigion/scarpets/blob/master/README.md#flowerify
+// made in 1.19.2, works 1.19+
 
-//--no blue orchid as there's no point
+// no blue orchid as there's no point
 global_flowers = [
   'dandelion',
   'poppy',
@@ -63,18 +63,18 @@ __config() -> {
   }
 };
 
-//--select the desired area's corners
+// select the desired area's corners
 set_one_corner(one_corner) -> (
-    global_area_from = one_corner;
-    print(format('i One corner of the selection is now set to ' + global_area_from))
+  global_area_from = one_corner;
+  print(format('i One corner of the selection is now set to ' + global_area_from))
 );
 
 set_other_corner(other_corner) -> (
-    global_area_to = other_corner;
-    print(format('i The other corner of the selection is now set to ' + global_area_to))
+  global_area_to = other_corner;
+  print(format('i The other corner of the selection is now set to ' + global_area_to))
 );
 
-//--check if there's a selection and if it's valid (grass blocks)
+// check if there's a selection and if it's valid (grass blocks)
 check_selection() -> (
   if(global_area_from != [0, 0, 0]
     && global_area_to != [0, 0, 0]
@@ -84,12 +84,12 @@ check_selection() -> (
   )
 );
 
-//--notify the user about wrong selection
+// notify the user about wrong selection
 invalid_selection_message() -> (
   print(format('r There\'s no area selected or it\'s invalid! ', 'g To select an area use the set_<one|other>_corner commands! Each corner has to be a grass block!'))
 );
 
-//--clears grass duh
+// clears grass duh
 __clear_grass(loc) -> (
 	scan(loc, l(3, 2, 3),
     if(
@@ -99,7 +99,7 @@ __clear_grass(loc) -> (
 	);
 );
 
-//--this is the base of the whole thing, repeated 10 times (looped in plant_flowers)
+// this is the base of the whole thing, repeated 10 times (looped in plant_flowers)
 __sweep(center, range) -> (
   scan(center,range,
 		if(_ == 'grass_block',
@@ -109,9 +109,9 @@ __sweep(center, range) -> (
 	);
 );
 
-//--check the selection
-//--if it's valid plant flowers
-//--else notify the user
+// check the selection
+// if it's valid plant flowers
+// else notify the user
 plant_flowers() ->(
   if(check_selection(),
     print(format('li Planting flowers...'));
@@ -124,8 +124,8 @@ plant_flowers() ->(
   )
 );
 
-//--check the selection
-//--then fill layer above flowers with the corresponding glass type
+// check the selection
+// then fill layer above flowers with the corresponding glass type
 add_glass() -> (
   if(check_selection(),
     print(format('gi Adding glass layer ...'));
@@ -139,7 +139,7 @@ add_glass() -> (
   )
 );
 
-//--main menu, credits & how to
+// main menu, credits & how to
 _main_menu() -> (
   menu_lines = [
     '',
