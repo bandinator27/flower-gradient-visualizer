@@ -3,7 +3,7 @@
 // based on Firigion's & gnembon's similar scripts
 // https://github.com/gnembon/scarpet/blob/master/programs/utilities/flower.sc
 // https://github.com/Firigion/scarpets/blob/master/README.md#flowerify
-// made in 1.19.2, works 1.19+
+// made in 1.19.2
 
 // no blue orchid as there's no point
 global_flowers = [
@@ -66,12 +66,12 @@ __config() -> {
 // select the desired area's corners
 set_one_corner(one_corner) -> (
   global_area_from = one_corner;
-  print(format('i One corner of the selection is now set to ' + global_area_from))
+  print(format('i One corner of the selection is now ' + global_area_from))
 );
 
 set_other_corner(other_corner) -> (
   global_area_to = other_corner;
-  print(format('i The other corner of the selection is now set to ' + global_area_to))
+  print(format('i The other corner of the selection is now ' + global_area_to))
 );
 
 // check if there's a selection and if it's valid (grass blocks)
@@ -125,7 +125,7 @@ plant_flowers() ->(
 );
 
 // check the selection
-// then fill layer above flowers with the corresponding glass type
+// then fill layer above flowers with the corresponding stained glass
 add_glass() -> (
   if(check_selection(),
     print(format('gi Adding glass layer ...'));
@@ -144,10 +144,10 @@ _main_menu() -> (
   menu_lines = [
     '',
     '+------------+',
-    format('ie Flower Pattern Visualizer Scarpet App'),
+    format('ie Flower Gradinet Visualizer Scarpet App'),
     format('l Made by ', 'yu bandinator_', '@https://www.youtube.com/channel/UCdyMN5aRGibjSENUILp9J1Q', 'gi  (2023)'),
 
-    format('w Based on ', 'yu Firigion\'s', '@https://github.com/Firigion/scarpets/blob/master/README.md#flowerify', 'w  and ', 'yu gnembon\'s', '@https://github.com/gnembon/scarpet/blob/master/programs/utilities/flower.sc', 'w  similar scripts.'),
+    format('w Inspired by ', 'yu Firigion\'s', '@https://github.com/Firigion/scarpets/blob/master/README.md#flowerify', 'w  and ', 'yu gnembon\'s', '@https://github.com/gnembon/scarpet/blob/master/programs/utilities/flower.sc', 'w  similar scripts.'),
     '+------------+',
     '',
     format('be How to use:'),
@@ -158,15 +158,15 @@ _main_menu() -> (
     format('b 4.', 'w  Enjoy the pretty landscape you just made ☺'),
     '',
     format('br Commands:'),
-    format('y /flower_pattern_visual', 'w  - main command, shows this page'),
+    format('y /flower_gradinet', 'w  - main command, shows this page'),
     '',
-    format('y /flower_pattern_visual set_one_corner <x> <y> <z>', 'w  - pick a block for one corner of the area where you\'d like to have flowers'),
+    format('y /flower_gradinet set_one_corner <x> <y> <z>', 'w  - pick a block for one corner of the area'),
     '',
-    format('y /flower_pattern_visual set_other_corner <x> <y> <z>', 'w  - pick a block for the other corner of the area where you\'d like to have flowers'),
+    format('y /flower_gradinet set_other_corner <x> <y> <z>', 'w  - pick a block for the other corner of the area'),
     '',
-    format('y /flower_pattern_visual plant_flowers ', 'w  - plants flowers on the selected area specified by the set_corner commands (Tries to plant a flower 10 times on every block, just rerun the command if there are holes/not enough flowers)'),
+    format('y /flower_gradinet plant_flowers ', 'w  - plants flowers on the selected area specified by the set_corner commands (Tries to plant a flower 10 times on every block, just rerun the command if there are holes/not enough flowers)'),
     '',
-    format('y /flower_pattern_visual add_glass ', 'w  - adds a layer of stained glass above the flowers for better visibility, based on the flower type (optional)')
+    format('y /flower_gradinet add_glass ', 'w  - (optional) adds a layer of stained glass above the flowers for better visibility, based on the flower type')
   ];
 
   p = player();
