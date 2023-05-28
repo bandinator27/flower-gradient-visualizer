@@ -1,5 +1,5 @@
 # Flower Gradient Visualizer
-A [scarpet](https://github.com/gnembon/scarpet) app to make visualizing flower gradients a whole lot easier. Useful to figure out where to build flower farms.
+A [scarpet](https://github.com/gnembon/scarpet) app to make visualizing flower gradients a whole lot easier. Useful for figuring out where to build flower farms.
 
 ## Installation
 1. Download [flower-gradient.sc](https://github.com/bandinator27/flower-gradient-visualizer/blob/main/flower_gradient.sc)
