@@ -145,7 +145,7 @@ _main_menu() -> (
     '',
     '+------------+',
     format('ie Flower Gradinet Visualizer Scarpet App'),
-    format('l Made by ', 'yu bandinator_', '@https://www.youtube.com/channel/UCdyMN5aRGibjSENUILp9J1Q', 'gi  (2023)'),
+    format('l Made by ', 'yu bandinator_', '@https://www.youtube.com/channel/UCdyMN5aRGibjSENUILp9J1Q'),
 
     format('w Inspired by ', 'yu Firigion\'s', '@https://github.com/Firigion/scarpets/blob/master/README.md#flowerify', 'w  and ', 'yu gnembon\'s', '@https://github.com/gnembon/scarpet/blob/master/programs/utilities/flower.sc', 'w  similar scripts.'),
     '+------------+',
@@ -164,7 +164,7 @@ _main_menu() -> (
     '',
     format('y /flower_gradinet set_other_corner <x> <y> <z>', 'w  - pick a block for the other corner of the area'),
     '',
-    format('y /flower_gradinet plant_flowers ', 'w  - plants flowers on the selected area specified by the set_corner commands (Tries to plant a flower 10 times on every block, just rerun the command if there are holes/not enough flowers)'),
+    format('y /flower_gradinet plant_flowers ', 'w  - plants flowers on the selected area specified by the set_corner commands (Tries to plant a flower 10 times on every block, just rerun the command if there are not enough flowers)'),
     '',
     format('y /flower_gradinet add_glass ', 'w  - (optional) adds a layer of stained glass above the flowers for better visibility based on the flower type')
   ];
