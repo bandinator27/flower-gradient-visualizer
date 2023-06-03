@@ -151,7 +151,7 @@ _main_menu() -> (
     '+------------+',
     '',
     format('be How to use:'),
-    format('yu Showcase video', '@https://www.youtube.com/watch?v=coming_soon'),
+    format('yu Showcase video', '@https://youtu.be/Q-2mYzw4Geg'),
     format('b 1.', 'w  Select an area with the set corner commands. It has to be a flat grass_block surface with air above.'),
     format('b 2.', 'w  Plant flowers. The plant_flowers command does that 4 u ;)'),
     format('b 3.', 'w  (Optional) Run the add_glass command. It adds a layer of stained glass above the flowers based on their type. This makes everything nicer to look at, basically the whole reason why I made this.'),
